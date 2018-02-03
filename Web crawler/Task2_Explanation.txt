@@ -1,0 +1,10 @@
+Explanation for Task2:
+
+
+To implement focused crawling I have used regular expression for filtering out links and anchor texts, not containing "rain" keyword.
+I have assumed that the keyword can start with letter of any case and the url can have only "/" or "_" before the keyword and anything after the keyword.
+(eg: /Rainband, /Heavy_rain_(meteorology)) 
+For the anchor text I have assumed, it can either start with the keyword itself or can have only space before it and anything after keyword.
+(eg: rainfall,rainy)
+
+With the above constraints, I got 165 url matches in BFS crawling. (Max depth reached = 3)
