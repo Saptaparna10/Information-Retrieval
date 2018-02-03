@@ -1,0 +1,28 @@
+Report on the implementation details:
+-------------------------------------
+
+In order to implement BM25 model I have performed the following steps:
+
+Step 1: Using the corpus and indexer module from HW3, generate inverted index for unigrams.
+Step 2: Calculate the average document length by summing up number of words in all documents and dividing by number of documents.
+Step 3: for each query in 'query.txt' file, repeat the following steps:
+		Step 3A: Create a dictionary query_term_list containing query term and their frequency in query.
+		Step 3B: Create a dictionary updated_inverted_index by keeping only the query terms from our inverted index.
+		Step 3C: Create a dictionary doc_score, to store doc_id and their scores.
+		Step 3D: for each term in updated_inverted_index, repeat the following steps:
+				 Step 3Da: calculate number of docs, conatining term, document length, frequency of term in query
+				 Step 3Db: for each document in inverted index, calculate BM25 score.
+				 Step 3Dc: Populate the doc_score using the same. If document already exists, then add to previous score.
+		Step 3E: Sort the doc_score in reverse order.
+		Step 3F: Write the scores to individual files as per queries in "query_id Q0 doc_id rank BM25_score system_name" format.
+To calculate BM25, we assume that no relevance information is available and the constants are given as k1 = 1.2, k2 = 100, b = 0.75.
+The formula being used is, product of three components. 
+	1) log(((r + 0.5) / (R - r + 0.5)) / ((n - r + 0.5) / (N - n - R + r + 0.5)))
+	2) ((k1 + 1) * f) / (K + f)
+	3) ((k2 + 1) * qf) / (k2 + qf)
+	where N, ni are
+	total number of docs in collectioln, Number of docs containing term
+	r and R are set to zero 
+	fi is the frequency of term i in the document;
+	qfi is the frequency of term i in the query; 
+	k is K = k1((1 - b) + b · dl/avdl)
