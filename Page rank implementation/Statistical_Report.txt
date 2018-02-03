@@ -1,0 +1,26 @@
+Simple Statistics of G1_Graph and G2_Graph::
+--------------------------------------------
+
+A. G1_Graph:
+
+The total number of pages in the graph are : 1000
+The total number of pages in the graph with no out-links (sinks) are : 63
+The total number of pages in the graph with no in-links (sources) are : 0
+
+Proportion of pages with no out-links (sinks) = (number of sink pages in the graph) / (total number of pages in the graph)
+											  = 63 / 1000 = 0.063
+											  
+Proportion of pages with no in-links (sources) = (number of source pages in the graph) / (total number of pages in the graph)
+											  = 0 / 1000 = 0
+											  
+A. G2_Graph:
+
+The total number of pages in the graph are : 
+The total number of pages in the graph with no out-links (sinks) are : 6
+The total number of pages in the graph with no in-links (sources) are : 0
+
+Proportion of pages with no out-links (sinks) = (number of sink pages in the graph) / (total number of pages in the graph)
+											  =  6 / 1000 = 0.006
+											  
+Proportion of pages with no in-links (sources) = (number of source pages in the graph) / (total number of pages in the graph)
+											   = 0 / 1000 = 0

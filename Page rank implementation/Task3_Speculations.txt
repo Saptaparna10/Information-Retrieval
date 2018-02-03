@@ -1,0 +1,82 @@
+Speculation on why the top 10 web pages have high Page Rank values:
+-------------------------------------------------------------------
+
+Results:
+--------
+The top 10 pages of 'G1.txt' as per their PageRank values are as follows:
+
+1. International_Standard_Book_Number
+2. Digital_object_identifier
+3. International_Standard_Serial_Number
+4. National_Diet_Library
+5. Bibcode
+6. PubMed_Identifier
+7. World_War_II
+8. Canada
+9. Japan
+10.OCLC
+
+The top 10 pages of the same graph as per their inlink-counts are as follows:
+
+1. International_Standard_Book_Number - 431
+2. Tropical_cyclone - 374
+3. Digital_object_identifier - 355
+4. Bibcode - 247
+5. Wayback_Machine - 245
+6. National_Oceanic_and_Atmospheric_Administration - 222
+7. Tropical_cyclone_scales - 217
+8. Extratropical_cyclone - 202
+9. National_Hurricane_Center - 199
+10.Pascal_(unit) - 192
+
+The top 10 pages of 'G2.txt' as per their PageRank values are as follows:
+
+1. Virtual_International_Authority_File
+2. International_Standard_Book_Number
+3. United_States
+4. Digital_object_identifier
+5. Integrated_Authority_File
+6. Wayback_Machine
+7. International_Standard_Serial_Number
+8. Biblioth%C3%A8que_nationale_de_France
+9. Canada
+10.United_Kingdom
+
+The top 10 pages of the same graph as per their inlink-counts are as follows:
+
+1. International_Standard_Book_Number - 541
+2. Turks_and_Caicos_Islands - 362
+3. United_States - 352
+4. United_Kingdom - 320
+5. Digital_object_identifier - 314
+6. Wayback_Machine- 295
+7. Integrated_Authority_File - 294
+8. Bermuda - 286
+9. Geographic_coordinate_system - 284
+10.Montserrat - 278
+
+Explanation:
+------------
+
+One of the measures of calculating page rank is in-links. So, if a page has more in-links, it increases the chance
+of placing the page at higher rank. That's why International_Standard_Book_Number might be placed at the top. But it is not the only criteria. The other factor which can impact the page rank is popularity of in-links. If a page is being pointed
+by popular pages (having higher page_rank), it significantly contributes in increasing page rank compared to being pointed
+by, may be more number of less popular pages. We can see,  Tropical_cyclone is having many in-links but it didn't get placed in top 10 as per page ranking score.
+Moreover, page outlink can also contribute in pagerank value. If a page P1 is pointed by another page P2 which has more number of outlinks, then increment in page rank of the page P1 due to P2 can be significantly less. Number of outlinks
+distribute the page rank. So, it has inverse effect on the same. Because Tropical_cyclone has more outlinks than other pages, it might be getting less page rank score.
+
+
+Conclusion:
+-----------
+
+So number of inlinks, is a major criteria in calculating page rank. But it is not the only criteria as explained above.
+Other factors also might contribute in increase/decrease of page rank
+
+
+
+
+
+
+
+
+

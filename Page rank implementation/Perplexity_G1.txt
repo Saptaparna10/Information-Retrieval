@@ -1,0 +1,19 @@
+Perplexity values for each iteration until convergence for G1 is given below:
+------------------------------------------------------------------------------- 
+
+Perplexity for iteration number 1 is 604.872771964
+Perplexity for iteration number 2 is 549.095520952
+Perplexity for iteration number 3 is 501.466918694
+Perplexity for iteration number 4 is 472.331587158
+Perplexity for iteration number 5 is 452.732999701
+Perplexity for iteration number 6 is 439.475547506
+Perplexity for iteration number 7 is 430.482690043
+Perplexity for iteration number 8 is 424.350343657
+Perplexity for iteration number 9 is 420.179145961
+Perplexity for iteration number 10 is 417.324656652
+Perplexity for iteration number 11 is 415.377137485
+Perplexity for iteration number 12 is 414.042217193
+Perplexity for iteration number 13 is 413.129507612
+Perplexity for iteration number 14 is 412.503289818
+Perplexity for iteration number 15 is 412.074422186
+Perplexity for iteration number 16 is 411.779900312
