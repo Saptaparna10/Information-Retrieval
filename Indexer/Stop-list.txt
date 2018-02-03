@@ -1,0 +1,62 @@
+Generating stop list using unigram data:
+
+the 415064
+of 204700
+and 165240
+in 143038
+to 111610
+a 103120
+is 53028
+on 45914
+as 44838
+for 39446
+was 39130
+by 37994
+from 33854
+with 33602
+s 31701
+that 28058
+at 25952
+are 24284
+it 23756
+were 21780
+edit 19956
+or 19604
+an 18866
+which 18028
+this 16202
+2 15270
+be 15188
+1 14919
+also 14566
+its 14414
+
+PROCESS OF GENERATING STOP LIST:
+--------------------------------------
+
+There are various ways of generating a stoplist like using the most frequent terms as stop words. I have followed the below steps:
+
+	1. Calculate the term frequencies for each unique word in the corpus
+	2. Sort the terms from most to least frequent
+	3. Use top N terms to be the stop words
+	4. Manually filter the stop list to exclude the terms which are relevant to the topic of the documents
+	
+In my case the value of N is 33. However, top 33 words included the below topically relevant terms : 
+
+	a. hurricane -> 25782 
+	b. tropical -> 19290
+	c. storm -> 18080
+	
+
+So, these three above-mentioned terms are excluded from the stop list.
+
+EXPLANATION OF CUT-OFF VALUE:
+-----------------------------------------------------------
+
+The cut-off value of my stoplist for the unigram is 33. 
+
+The cut-off value should be chosen is such a way that I are including only those words in the stop list which are frequent and mostly irrelevant. As the stop words are not indexed, I should be cautios to not include any such word in the stop list which might impact retrieval procedures during query processing. For example, if I include the term 'tropical' in the stop list, any query having the term 'tropical' will not find a match with any of the documents in the corpus. This is not correct as the Wikipedia articles that I have used for indexing are mainly about the topic 'tropical cyclone'. So, I have decided to exclude the topically relevant terms like 'hurricane', 'tropical', 'storm' from the stop list. 
+
+I can see that there are a lot of prepositions in the top 33 most frequent terms. These terms don't hint anything about document relevance on their own and So, removing them before indexing will save a lot of disk space. Moreover, it will decrease the index size leading to an increase in the retrieval efficiency and effectiveness. However, after the first 33 terms I can see topically relevant terms like 'cyclone' 'damage' 'island' etc. in the term frequency table which should not be removed from index. So, I  decided to keep the cut off value as 33.
+
+The stop list contains the most popular words of English language like 'the', 'and', 'a', 'is', 'was' etc along with common numeric terms like '1' '2'. These words don't contribute much in identifying the document, since these are used in all English sentances. Hence, they can be deleted before generating index.
